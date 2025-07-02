@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: school-api
+    ports:
+      - "8000:8000"
+    # Monta o diretório atual no diretório /app do contêiner.
+    # Isso permite que as alterações no código sejam refletidas em tempo real,
+    # o que é ideal para desenvolvimento com a flag --reload.
+    volumes:
+      - .:/app
